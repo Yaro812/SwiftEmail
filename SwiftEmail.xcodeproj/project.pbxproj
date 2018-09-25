@@ -10,6 +10,8 @@
 		6DB89514215AA47500780D5F /* SwiftEmail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB8950A215AA47500780D5F /* SwiftEmail.framework */; };
 		6DB89519215AA47500780D5F /* SwiftEmailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB89518215AA47500780D5F /* SwiftEmailTests.swift */; };
 		6DB8951B215AA47500780D5F /* SwiftEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DB8950D215AA47500780D5F /* SwiftEmail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DB89526215AA58000780D5F /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB89525215AA58000780D5F /* EmailAddress.swift */; };
+		6DB89528215AA59200780D5F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB89527215AA59200780D5F /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		6DB89513215AA47500780D5F /* SwiftEmailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftEmailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB89518215AA47500780D5F /* SwiftEmailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEmailTests.swift; sourceTree = "<group>"; };
 		6DB8951A215AA47500780D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DB89525215AA58000780D5F /* EmailAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddress.swift; sourceTree = "<group>"; };
+		6DB89527215AA59200780D5F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 		6DB89500215AA47500780D5F = {
 			isa = PBXGroup;
 			children = (
+				6DB89524215AA55400780D5F /* Source */,
 				6DB8950C215AA47500780D5F /* SwiftEmail */,
 				6DB89517215AA47500780D5F /* SwiftEmailTests */,
 				6DB8950B215AA47500780D5F /* Products */,
@@ -84,6 +89,15 @@
 				6DB8951A215AA47500780D5F /* Info.plist */,
 			);
 			path = SwiftEmailTests;
+			sourceTree = "<group>";
+		};
+		6DB89524215AA55400780D5F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6DB89525215AA58000780D5F /* EmailAddress.swift */,
+				6DB89527215AA59200780D5F /* String.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +162,7 @@
 				TargetAttributes = {
 					6DB89509215AA47500780D5F = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					6DB89512215AA47500780D5F = {
 						CreatedOnToolsVersion = 10.0;
@@ -194,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB89528215AA59200780D5F /* String.swift in Sources */,
+				6DB89526215AA58000780D5F /* EmailAddress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +358,7 @@
 		6DB8951F215AA47500780D5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.spb.thorax.SwiftEmail;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +385,7 @@
 		6DB89520215AA47500780D5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +411,7 @@
 		6DB89522215AA47500780D5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2794N3T97K;
 				INFOPLIST_FILE = SwiftEmailTests/Info.plist;
@@ -409,6 +430,7 @@
 		6DB89523215AA47500780D5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2794N3T97K;
 				INFOPLIST_FILE = SwiftEmailTests/Info.plist;
