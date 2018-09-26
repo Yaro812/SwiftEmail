@@ -8,15 +8,13 @@
 
 import Foundation
 
-import Foundation
-
-struct EmailAddress {
-    let string: String
-    var name: String { return string.components(separatedBy: "@").first ?? "" }
-    var domain: String { return string.components(separatedBy: "@").last ?? "" }
-    var components: [String] { return name.components(separatedBy: ".") + domain.components(separatedBy: ".") }
+public struct EmailAddress {
+    public let string: String
+    public var name: String { return string.components(separatedBy: "@").first ?? "" }
+    public var domain: String { return string.components(separatedBy: "@").last ?? "" }
+    public var components: [String] { return name.components(separatedBy: ".") + domain.components(separatedBy: ".") }
     
-    init?(string: String) {
+    public init?(string: String) {
         guard string.isValidEmail else { return nil }
         
         self.string = string
